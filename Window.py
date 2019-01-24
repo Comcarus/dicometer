@@ -140,7 +140,7 @@ class Window(Frame):
     def onMouseRightClicked(self, event):
         if self.imageShown and len(self.points) != 0:
             point = (event.x, event.y)
-            self.points = [x for x in self.points if abs(x[0] - point[0]) > 3 and abs(x[1] - point[1]) > 3]
+            self.points = [x for x in self.points if abs(x[0] - point[0]) > 3 or abs(x[1] - point[1]) > 3]
         self.redraw()
 
     def onNextImage(self):
