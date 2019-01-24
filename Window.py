@@ -73,7 +73,7 @@ class Window(Frame):
         self.canvas = Canvas(self.root, width=size[0], height=size[1])
         self.canvas.pack(expand=1)
         self.canvas.bind("<Button-1>", self.onMouseClicked)
-        self.canvas.bind("<Button-2>", self.onMouseRightClicked)
+        self.canvas.bind("<Button-3>", self.onMouseRightClicked)
 
     def showImage(self, imageToShow):
         width, height = np.array(imageToShow).shape
